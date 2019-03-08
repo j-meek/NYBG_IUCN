@@ -1,0 +1,214 @@
+---
+title: 'Data Deficient Plantae Species: A Preliminary Examination'
+author: "Michael Levin and Jared Meek"
+date: "3/7/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+setwd("~/Desktop/")
+data <- read.csv("~/Desktop/redlist_species_data_ceba488a-62d0-4fc7-8074-d8ead8fcd50a/assessments.csv")
+```
+
+```{r, echo=FALSE}
+data.1998 <- filter(data, yearPublished == 1998)
+data.first10 <-  slice(data.1998, 1:10)
+clean.data.first10 <- select(data.first10, scientificName, yearPublished, assessmentDate, realm, habitat, population, range)
+```
+
+# Data Deficient Species by Year
+```{r, echo=FALSE}
+ggplot(data = data,
+       mapping = aes(x = yearPublished)) +
+  geom_bar() +
+  theme_minimal() +
+  ggtitle("Number of data deficient species grouped by the year in which 
+          their assessment was published") +
+  xlab("Year Published") +
+  ylab("Number of Data Deficient Entries Published(yr)")
+```
+
+# IUCN Data Deficient Criteria
+
+IUCN Red List Data Deficient Category and Criteria (Butchart and Bird, 2010)
+
+* "Species are classified as Data Deficient on the IUCN Red List if there is inadequate information to make an assessment of their extinction risk based on distribution and/or population status."
+* These "species lack sufficient information on population size, trends, distribution and/or threats to assess them against the Red List criteria."
+* "Data Deficient is probably the most controversial and misunderstood of IUCN Red List categories."
+
+# Preliminary Examination of the first 10 Data Deficient Plantae Species on the IUCN Red List
+
+## *Diospyros occulta*
+
+### IUCN Information
+
+* Realm: 
+* Habitat: 
+* Population:
+* Range:
+* Conservation Action:
+
+### Preliminary Research
+
+*
+
+## *Cassipourea swaziensis*
+
+### IUCN Information
+
+* Realm: 
+* Habitat: 
+* Population:
+* Range:
+* Conservation Action:
+
+### Preliminary Research
+
+*
+
+## *Greyia flanaganii*
+
+### IUCN Information
+
+* Realm: 
+* Habitat: 
+* Population:
+* Range:
+* Conservation Action:
+
+### Preliminary Research
+
+*
+
+## *Scolopia oreophila*
+
+### IUCN Information
+
+* Realm: 
+* Habitat: 
+* Population:
+* Range:
+* Conservation Action:
+
+### Preliminary Research
+
+*
+
+## *Allophylus marquesensis*
+
+### IUCN Information
+
+* Realm: 
+* Habitat: 
+* Population:
+* Range:
+* Conservation Action:
+
+### Preliminary Research
+
+*
+
+================================================================================================================
+
+## *Balsamocitrus camerunensis*
+
+### IUCN Information
+
+* Realm: Afrotropical
+* Habitat: 
+* Population: Little is known on the status of the populations.
+* Range: A small forest tree known from occurrences at Batouri and Bertona in the Eastern Province of Cameroon and from Boukoko in Central African Republic.
+* Conservation Action:
+
+### Preliminary Research
+
+* Antibacterial Research (mentions as recent as  2018)
+    + "In the present study, twenty-two compounds (three terpenoids, eleven phenolics and eight alkaloids) isolated from three Cameroonian medicinal plants, namely Garcinia nobilis, Oricia suaveolens and Balsamocitrus camerunensis, as well as the crude extracts were tested for their antibacterial activities..." (Fouotsa et al. 2013)
+    + "Isolation, characterization and anti-Toxoplasma gondii activity of constituents from the CH2Cl2/MeOH (1/1) extract of the roots of the cameroonian plant Balsamocitrus camerunensis L. were investigated in this study...Some of the isolated compounds showed noteworthy activity against Toxoplasma gondii intracellular parasite in mammals with an inhibition of parasite growth of around 46.44% for compound 4 and 82.12% for compound 3 which was the most active compound." (Emmanuel et al. 2014)
+  
+## *Ixora marquesensis*
+
+* Ixora marquesensis is known from three islands
+    + Nuku Hiva, Mohotani, and Fatu Hiva. Noted in Lorence et al., 2007, confirmed by Lorence et al., 2016
+    + Occurs in wooded ravines or open mesic forest or dry forest
+    + Collectors note that no regeneration of this species is occurring on Mohotani as a result of browsing by large populations of feral sheep. (Lorence et al., 2007)
+* Phylogeny of Ixora reexamined and substantially altered (Mouly et al., 2009)  
+* "As the Marquesan environment is under serious threat from human impact, feral animals
+and weeds, the conservation status was estimated for each Ixora species. It is concluded that all Marquesan taxa are in need of inclusion in the IUCN Red List, their status ranging from endangered to critically endangered." (Lorence et al., 2007)
+
+### IUCN Information
+
+* Realm: Australasian
+* Habitat: 
+* Population:
+* Range: Subpopulations are recorded from Fatu Hiva, Mohotani and Nuku Hiva.
+* Conservation Action:
+
+### Preliminary Research
+
+*
+
+## *Psychotria adamsonii*
+
+### IUCN Information
+
+* Realm: Australasian
+* Habitat: 
+* Population:
+* Range: The species has been collected only from Ua Pou from the Pepehitoua valley at about 760 m.
+* Conservation Action:
+
+### Preliminary Research
+
+* "Another endemic species, Psychotria adamsonii, known only from the type collected in 1929, was not found despite extensive research." (Lorence et al., 2016) [Translated from French]
+* "Indeed, among the 34 species whose status is considered as poorly documented (data deficient, DD) by IUCN, many are in fact critically endangered (e.g., Ixora temehaniensis, Metatrophis margaretae, Nesoluma nadeaudii, and Psychotria franchetiana, personal observation.) or endangered (e.g., Psychotria tubuaiensis, personal observation), and a few of them are probably extinct (e.g., Myoporum rimatarense, personal observation or Psychotria adamsonii, a species not collected since its first description in 1929, Lorence and Wagner 2005)." (Meyer and Butaud, 2009)
+
+## *Psychotria le-bronnecii*
+
+### IUCN Information
+
+* Realm: Australasian
+* Habitat: 
+* Population:
+* Range: Subpopulations are recorded from Fatu Hiva, Hiva Oa and Tahuata.
+* Conservation Action:
+
+### Preliminary Research
+
+* No results returned from SCOPUS and Web of Science
+* Two mostly irrelevant results from Google Scholar -- "Lists of Taxa Named for F. Raymond Fosberg and by Him" and "A revision of Psychotria (Rubiaceae) in the Marquesas Islands (French Polynesia)"
+
+
+## *Capparis crotonantha*
+
+### IUCN Information
+
+* Realm: Neotropical
+* Habitat: 
+* Population:
+* Range: The species is known only from the type collection in San Blas. The specimen is not complete and was probably described erroneously as a separate species from *C. filipes*, which occurs widely in the same area.
+* Conservation Action:
+
+### Preliminary Research
+
+* No reults returned from SCOPUS and Web of Science
+* One result from Google Scholar that discusses the family but fails to mention this species. 
+* See the note under **range** in the above IUCN information. 
+
+# References
+
+* Butchart, S. H. M., and Bird, J. P. (2010). Data Deficient birds on the IUCN Red List: What don’t we know and why does it matter? Biol. Conserv. 143, 239–247. doi:10.1016/J.BIOCON.2009.10.008.
+
+* Emmanuel, N. H., Emmanuel, J. T. M., Edwige, L. N., Henri, R. Z., and Anatole, G. B. A. (2014). Anti-toxoplasma gondii activity of constituents from Balsamocitrus camerunensis L (Rutaceae). African J. Biotechnol. 13, 4680–4684. doi:10.5897/AJB2014.14177.
+
+* Fouotsa, H., Mbaveng, A. T., Mbazoa, C. D., Nkengfack, A. E., Farzana, S., Iqbal, C. M., et al. (2013). Antibacterial constituents of three Cameroonian medicinal plants: Garcinia nobilis, Oricia suaveolens and Balsamocitrus camerunensis. BMC Complement. Altern. Med. 13, 81. doi:10.1186/1472-6882-13-81.
+
+* Lorence, D. H., Wagner, W. L., Mouly, A., and Florence, J. (2007). Revision of Ixora (Rubiaceae) in the Marquesas Islands (French Polynesia). Bot. J. Linn. Soc. 155, 581–597. Available at: https://academic.oup.com/botlinnean/article-abstract/155/4/581/2420421 [Accessed March 7, 2019].
+
+* Lorence, D. H., Wood, K. R., Perlman, S. P., and Meyer, J.-Y. (2016). “Flore vasculaire et végétation des îles Marquises: caractéristiques, originalités et vulnérabilité,” in Biodiversité terrestre et marine des îles Marquises, Polynésie française: Société française d’Ichtyologie, eds. R. Galzin, S. Duron, and J. Meyer (Paris), 311–336.
+
+* Meyer, J.-Y., and Butaud, J.-F. (2009). The impacts of rats on the endangered native flora of French Polynesia (Pacific Islands): drivers of plant extinction or coup de grâce species? Biol. Invasions 11, 1569–1585. doi:10.1007/s10530-008-9407-y.
+
+* Mouly, A., Razafimandimbison, S. G., Khodabandeh, A., and Bremer, B. (2009). Phylogeny and classification of the species-rich pantropical showy genus Ixora (Rubiaceae-Ixoreae) with indications of geographical monophyletic units and hybrids. Am. J. Bot. 96, 686–706. doi:10.3732/ajb.0800235.
