@@ -15,8 +15,41 @@ library(rCAT)
 ```
 
 ```{r}
-#Triceps and biceps
-#That's all fieldwork is about
-#Triceps and biceps
+# IUCN Comparison
+
+# Take all classified plant species
+# Calculate EOO/AOO for them in rCAT
+# Compare to see if rCAT predicts their currently assessed threat categories
 ```
 
+```{r}
+# Re-assess data deficient plants of North America
+
+# Pull species data in using rgbif
+# Limit 1969 - present
+# Limit to Canada, US, Mexico (North America)
+# Assess these through rCAT
+```
+
+```{r}
+# rgbif example
+Spergularia <- occ_search(scientificName="Spergularia melanocaulos", limit=1000)
+# Very good habit to trim the default data downloaded to be smaller, and make sure it's a data frame. Also make sure you have only complete cases because some of the code below will choke if there are missing values. Also, sometimes the same individual plant/population will be recorded at multiples times in the same location, which is why you may want to run the "unique" commands. The "dim" command helps you look at how you trimmed down the file.
+
+#Choose just three variables
+Spergularia.small <- subset(Spergularia$data, select=c("species", "decimalLatitude", "decimalLongitude"))
+
+#Rename the columns, make sure you're working with a dataframe
+colnames(Spergularia.small) <- c("species", "lat", "lon")
+Spergularia.small <- as.data.frame(Spergularia.small)
+head(Spergularia.small)
+
+#There are often occurrences with missing values to remove 
+dim(Spergularia.small)
+Spergularia.small <- Spergularia.small[complete.cases(Spergularia.small),]
+dim(Spergularia.small)
+
+#Also there may be duplicates, the same plant or population observed twice or uploaded twice into the database
+Spergularia.u <- unique(Spergularia.small)
+dim(Spergularia.u)
+```
