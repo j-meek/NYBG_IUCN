@@ -1,0 +1,22 @@
+---
+title: "NYBG DD"
+author: "Jared"
+date: "10/7/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(rgbif)
+library(rCAT)
+```
+
+```{r}
+#Triceps and biceps
+#That's all fieldwork is about
+#Triceps and biceps
+```
+
